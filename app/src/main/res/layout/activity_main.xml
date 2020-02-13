@@ -3,10 +3,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="32dp"
+    android:background="@drawable/background"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="16dp"
     tools:context=".MainActivity">
 
+    <ImageButton
+        android:id="@+id/imgb_mic"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        android:layout_weight="1"
+        android:background="@drawable/ic_mic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/imgb_fast"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_fast_bird" />
+
+        <ImageButton
+            android:id="@+id/imgb_slow"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_slow_bird" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/imgb_darth_vader"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_darth_vader_bird" />
+
+        <ImageButton
+            android:id="@+id/imgb_chimpmunk"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_chimpmonk_bird" />
+
+    </LinearLayout>
 </LinearLayout>
