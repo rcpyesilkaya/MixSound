@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,58 +9,56 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/imgb_mic"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="100dp"
-        android:layout_weight="1"
-        android:background="@drawable/ic_mic" />
+
+    <ImageView
+        android:id="@+id/imgMicrophone"
+        android:layout_width="218dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/ic_microphoner" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_marginTop="70dp"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:paddingTop="50dp">
+        <ImageView
+            android:id="@+id/img_mana"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_mandd" />
 
-        <ImageButton
-            android:id="@+id/imgb_fast"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_margin="8dp"
-            android:background="@drawable/ic_fast_bird" />
-
-        <ImageButton
-            android:id="@+id/imgb_slow"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_margin="8dp"
-            android:background="@drawable/ic_slow_bird" />
+        <ImageView
+            android:id="@+id/img_manb"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_manbb" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="16dp">
+        android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/imgb_darth_vader"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_margin="8dp"
-            android:background="@drawable/ic_darth_vader_bird" />
+        <ImageView
+            android:id="@+id/img_manc"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_mancc" />
 
-        <ImageButton
-            android:id="@+id/imgb_chimpmunk"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_margin="8dp"
-            android:background="@drawable/ic_chimpmonk_bird" />
-
+        <ImageView
+            android:id="@+id/img_mand"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_manaa" />
     </LinearLayout>
+
 </LinearLayout>

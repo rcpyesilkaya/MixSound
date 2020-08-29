@@ -4,9 +4,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.speech.RecognizerIntent
-import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 import live.codemy.mixsoundlib.MixSound
 import live.codemy.mixsoundlib.SoundType
 
@@ -17,48 +17,29 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        val imgMic = findViewById<ImageButton>(R.id.imgb_mic)
-        val imgbFast: ImageButton = findViewById<ImageButton>(R.id.imgb_fast)
-        val imgbSlow = findViewById<ImageButton>(R.id.imgb_slow)
-        val imgbDarthVader = findViewById<ImageButton>(R.id.imgb_darth_vader)
-        val imgbChimpmunk = findViewById<ImageButton>(R.id.imgb_chimpmunk)
-
-        imgMic.setOnClickListener {
-
+        imgMicrophone.setOnClickListener {
             MixSound.getInstance(this).recordSound()
+            "mic" log this
 
-            "imgMic clicked !! " extShowToast this
         }
-
-        imgbSlow.setOnClickListener {
-
+        img_mana.setOnClickListener {
             MixSound.getInstance(this).changeSound(SoundType.Slow)
-
-            "imgbSlow clicked !! " extShowToast this
+            "a" log this
         }
-
-        imgbDarthVader.setOnClickListener {
-
-            MixSound.getInstance(this).changeSound(SoundType.DarthVader)
-
-            "imgbDarthVader clicked !! " extShowToast this
-        }
-
-        imgbChimpmunk.setOnClickListener {
-
+        img_manb.setOnClickListener {
             MixSound.getInstance(this).changeSound(SoundType.Chipmunk)
-
-            "imgbChimpmonk clicked !! " extShowToast this
+            "b" log this
         }
-
-        imgbFast.setOnClickListener {
-
+        img_manc.setOnClickListener {
+            MixSound.getInstance(this).changeSound(SoundType.DarthVader)
+            "c" log this
+        }
+        img_mand.setOnClickListener {
             MixSound.getInstance(this).changeSound(SoundType.Fast)
-
-            "imgbFast clicked !! " extShowToast this
+            "d" log this
         }
-    }
 
+    }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -68,26 +49,7 @@ class MainActivity : AppCompatActivity() {
                     val result = it.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
 //                    MixSound.recordSound = result.first()
                     MixSound.recordSound = """
-                        
-                        Koyduğum nokta belki son
-                        Ben bunu bilemem aynı bomb
-                        Gibi gelir sana belki de aynı ton
-                        Dibi delik gelebilir ama aynı fon
-                        Kendini bilemez montofon
-                        Ve monoton yaşar hep alt aynı don
-                        Anlatırım ben derdimi yalnız
-                        Ey, bi' mini microphone
-                        
-                        Şimdi bana bi' bakınız hadi
-                        Muamelesi kesebilir hasi
-                        Ve de Muhammed Ali gibi gelir asi
-                        Bana bak, beni gör ve de öl vasi
-                        Sesim hep duyulur tepeden bariton
-                        Mekanım olabilir her an ozon
-                        Yanıma gelenin canına girecektir
-                        Ey, bi' mini microphone
-                        
-                        
+                        Koyduğum nokta belki so
                     """.trimIndent()
                 }
             }
@@ -101,8 +63,8 @@ class MainActivity : AppCompatActivity() {
 
         super.onStop()
     }
-}
 
-infix fun String.extShowToast(context: Context) {
-    Toast.makeText(context, this, Toast.LENGTH_SHORT).show()
+}
+infix fun String.log(context:Context){
+    Toast.makeText(context,this,Toast.LENGTH_SHORT).show()
 }
